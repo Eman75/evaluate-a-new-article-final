@@ -1,0 +1,27 @@
+.social-media{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 30px;
+    text-align: center;
+
+}
+.social-media h3{
+    color: #281047;
+    margin-right: 10px;
+}
+.social-media a{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #bbb;
+    border-radius: 30%;
+    margin: 5px;
+    background:pink;
+    color: #1f2937;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}

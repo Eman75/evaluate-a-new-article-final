@@ -1,0 +1,20 @@
+form {
+  display: inline-block;
+  //display: flex;
+  border: 1px solid #545454;
+  border-radius: 3px;
+  width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  border-style: double;
+}
+
+input { 
+    align-items: center;
+    //text-align: center;
+    //text-align: right;
+    padding: 5px 20px;
+    width: 100%;
+    line-height: 16px;
+    margin: 10px 0;
+}
