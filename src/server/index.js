@@ -1,16 +1,17 @@
 var path = require('path')
 const express = require('express')
 const bodyParser = require('body-parser')
+const cors = require('cors');
 const mockAPIResponse = require('./mockAPI.js')
 const dotenv = require('dotenv');
 dotenv.config();
 
+
 const app = express()
 
-const cors = require('cors');
+app.use(bodyParser.json());
 
 app.use(cors());
-app.use(bodyParser.json());
 
 
 app.use(express.static('dist'))
@@ -19,7 +20,7 @@ app.use(express.static('dist'))
 
 console.log(__dirname)
 
-// url & api key variables
+// Save url & api key in variables
 const cloudURL = 'https://api.meaningcloud.com/sentiment-2.1?'
 const apiKey = process.env.API_KEY
 
@@ -31,7 +32,7 @@ app.get('/', function (req, res) {
 })
 
 
-// POST Route
+// Post Function and fetching data
 app.post('/api', async function(req, res) {
     userEntered = req.body.url;
     console.log(`You have entered: ${userEntered}`);
@@ -46,9 +47,7 @@ app.post('/api', async function(req, res) {
 })
 
 
-
-
-// designates what port the app will listen to for incoming requests
+// Determine which port to listen for
 app.listen(8081, function () {
     console.log('Example app listening on port 8081!')
 })
